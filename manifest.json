@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "pop-tabs",
-  "version": "0.0.0.1 alpha",
+  "version_name": "0.0.0.1 alpha",
   "version": "0.0.0.1",
   "minimum_chrome_version": "23",
   "icons": {
