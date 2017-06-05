@@ -1,10 +1,10 @@
 function getTabIdsPerWindow() {
-    return new Promise(function (resolve, reject) {
-        var result = new Map();
-        chrome.tabs.query({}, function (tabs) {
-            tabs.forEach(function (tab) {
-                var windowId = tab.windowId;
-                var tabId = tab.id;
+    return new Promise(resolve => {
+        let result = new Map();
+        chrome.tabs.query({}, tabs => {
+            tabs.forEach(tab => {
+                let windowId = tab.windowId;
+                let tabId = tab.id;
                 if (!result.has(windowId)) {
                     result.set(windowId, []);
                 }
@@ -15,21 +15,29 @@ function getTabIdsPerWindow() {
     });
 }
 
-function unifyAllTabs() {
-    return getTabIdsPerWindow().then(
-        function (tabIdsPerWindow) {
-            chrome.windows.getCurrent(function (window) {
-                tabIdsPerWindow.forEach(function (tabIds, windowId) {
-                    if (windowId !== window.id) {
-                        chrome.tabs.move(tabIds, {windowId: window.id, index: -1});
-                    }
-                });
-            });
-        }
-    )
+function getCurrentWindow() {
+    return new Promise(resolve => {
+        chrome.windows.getCurrent(function (window) {
+            resolve(window);
+        });
+    });
 }
 
-chrome.commands.onCommand.addListener(function (command) {
+function unifyAllTabs() {
+    let currentWindow = getCurrentWindow();
+    let tabIdsPerWindow = getTabIdsPerWindow();
+    return Promise.all([currentWindow, tabIdsPerWindow])
+        .then(([currentWindow, tabIdsPerWindow]) => {
+            tabIdsPerWindow.forEach((tabIds, windowId) => {
+                if (windowId !== currentWindow.id) {
+                    chrome.tabs.move(tabIds,
+                        {windowId: currentWindow.id, index: -1});
+                }
+            });
+        });
+}
+
+chrome.commands.onCommand.addListener(command => {
     if (command === 'unify-all-tabs') {
         unifyAllTabs();
     }
