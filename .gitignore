@@ -1,5 +1,8 @@
-# IDE
+# Webstorm IDE
 .idea/
 
 # archive
 src.zip
+
+# Development-related files
+node_modules/
