@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "pop-tabs",
+  "description": "Chrome extension to manipulate smartly and quickly numerous opened tabs",
+  "version_name": "0.0.0.1 alpha",
+  "version": "0.0.0.1",
+  "minimum_chrome_version": "25",
+  "permissions": [
+    "tabs",
+    "bookmarks"
+  ],
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "background": {
+    "scripts": [
+      "main.js"
+    ]
+  },
+  "commands": {
+    "unify-all-tabs": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Unify all tabs in the current windows"
+    }
+  }
+}
