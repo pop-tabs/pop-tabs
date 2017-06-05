@@ -12,7 +12,5 @@ See dashboard https://chrome.google.com/webstore/developer/dashboard .
      
 ## Screenshot
 
-<div>
-<img src="screenshots/index.png" style="height:600; wdith:400">
-</div>
+<img src="screenshots/index.png" height=300>
 
