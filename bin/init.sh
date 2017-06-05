@@ -13,7 +13,7 @@ which node &> /dev/null
 if [ $? -ne 0 ];  then
     die "Missing command 'node' in PATH."
 else
-    # Add script to  PATH
+    # Add script to PATH
     WD="$(\dirname "`\realpath "${BASH_SOURCE[0]}"`")"
     \cd "${WD}"
     NODE_PATH="$(\realpath ../node_modules/.bin/)";
