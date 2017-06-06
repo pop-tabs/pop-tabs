@@ -2,6 +2,10 @@
 
 This page describes how to complete, to debug or to improve this chrome extension.  
 
+~~~
+EXTENSION_ID: obdkadanihffijoldabdhhdhmdbkdejg
+~~~
+
 Before contributing, I advice you to read several tutorials on how to work google chrome:  
 \- https://support.google.com/chrome/?hl=en  
 \- https://developer.chrome.com/extensions  
