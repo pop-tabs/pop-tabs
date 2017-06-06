@@ -1,29 +1,31 @@
 {
-  "manifest_version": 2,
-  "name": "pop-tabs",
-  "description": "Chrome extension to manipulate smartly and quickly numerous opened tabs",
-  "version_name": "0.0.0.1 alpha",
-  "version": "0.0.0.1",
-  "minimum_chrome_version": "25",
-  "permissions": [
-    "tabs",
-    "bookmarks"
-  ],
-  "icons": {
-    "16": "icon-16x16.png",
-    "128": "icon-128x128.png"
-  },
-  "background": {
-    "scripts": [
-      "main.js"
-    ]
-  },
-  "commands": {
-    "unify-all-tabs": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+U"
-      },
-      "description": "Unify all tabs in the current windows"
+    "manifest_version": 2,
+    "name": "pop-tabs",
+    "description": "Chrome extension to manipulate smartly and quickly numerous opened tabs",
+    "version_name": "0.0.0.1 alpha",
+    "version": "0.0.0.1",
+    "minimum_chrome_version": "49",
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "contextMenus"
+    ],
+    "icons": {
+        "16": "icons/16x16.png",
+        "128": "icons/128x128.png"
+    },
+    "background": {
+        "scripts": [
+            "js/main.js",
+            "js/context-menu.js"
+        ]
+    },
+    "commands": {
+        "unify-all-tabs": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+U"
+            },
+            "description": "Merge all windows in the current window"
+        }
     }
-  }
 }

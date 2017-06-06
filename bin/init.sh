@@ -1,7 +1,6 @@
 # init.sh (GNU bash script 4.3)
 #
-# Use:
-# $ source init.sh
+# Use: source init.sh
 
 die() {
     >&2 echo "$1"
@@ -10,9 +9,13 @@ die() {
 
 # Check if node is available
 which node &> /dev/null
+
 if [ $? -ne 0 ];  then
+
     die "Missing command 'node' in PATH."
+
 else
+
     # Add script to PATH
     WD="$(\dirname "`\realpath "${BASH_SOURCE[0]}"`")"
     \cd "${WD}"
@@ -24,5 +27,6 @@ else
         \export PATH="${NODE_PATH}:${PATH}"
         \echo "Added ${NODE_PATH} to the front of PATH environment variable."
     fi
+
 fi
 

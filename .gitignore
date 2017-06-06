@@ -2,7 +2,7 @@
 .idea/
 
 # archive
-src.zip
+*.zip
 
 # Development-related files
 node_modules/
