@@ -34,9 +34,9 @@ The local data stored by google chrome application are in `$HOME/.config/google-
 
 **How to see all versions of google chrome and market shares ?**
 
-\- https://chromereleases.googleblog.com/
-\- http://gs.statcounter.com/browser-market-share/
-\- https://en.wikipedia.org/wiki/Google_Chrome_version_history
+\- https://chromereleases.googleblog.com/  
+\- http://gs.statcounter.com/browser-market-share/  
+\- https://en.wikipedia.org/wiki/Google_Chrome_version_history  
 
 **How to code javascript,css,html ... ?**
 
