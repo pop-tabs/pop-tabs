@@ -16,3 +16,7 @@ Before contributing, I advice you to read several tutorials on how to work googl
 Suppose that your work environment is Ubuntu.  
 
 The local data stored by google chrome application are in `$HOME/.config/google-chrome`. To see the code source of any chrome extension you can either install `Chrome Extension Source Code Viewer` or see the content of `Default/Extension/<chrome-extension-id>` folder. 
+
+**How to publish on Chrome Web store ?**
+
+Go to dashboard https://chrome.google.com/webstore/developer/dashboard .
