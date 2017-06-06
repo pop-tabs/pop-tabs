@@ -10,8 +10,8 @@
     "bookmarks"
   ],
   "icons": {
-    "16": "icon_16.png",
-    "128": "icon_128.png"
+    "16": "icon-16x16.png",
+    "128": "icon-128x128.png"
   },
   "background": {
     "scripts": [
