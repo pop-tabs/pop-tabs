@@ -12,7 +12,7 @@ python -m SimpleHTTPServer 8000
 
 3) Enable `Experimental Extension APIs` at chrome://flags/.
 
-4) Load your experimental chrome extension at chrome://extensions/ :  
+4) Load your experimental chrome extension at [chrome://extensions/](chrome://extensions/) :  
  \- allow `Developer mode`,  
  \- click on `Load unpacked extension…` button,  
  \- enable this chrome extension. 
