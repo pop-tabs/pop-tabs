@@ -29,7 +29,7 @@ There are a lot examples (above all with chromium project).
 
 Suppose that your work environment is Ubuntu.  
 
-The local data stored by google chrome application are in `$HOME/.config/google-chrome/<profile-name>` specified by then **Profile Path**, see that at `chrome://version`. To see the code source of any chrome extension you can either install `Chrome Extension Source Code Viewer` or see the content of `Default/Extension/<chrome-extension-id>` folder. 
+The local data stored by google chrome application are in `$HOME/.config/google-chrome/<profile-name>` specified by then **Profile Path**, see that at chrome://version. To see the code source of any chrome extension you can either install `Chrome Extension Source Code Viewer` or see the content of `Default/Extension/<chrome-extension-id>` folder. 
 
 **How to see all versions of google chrome and market shares ?**
 
