@@ -5,12 +5,5 @@
 
 Chrome extension to manipulate smartly and quickly numerous opened tabs.
 
-## Publish on Chrome Web store
-
-See dashboard https://chrome.google.com/webstore/developer/dashboard .
-
-     
-## Screenshot
-
 <img src="screenshots/index-1280x800.png" height=300>
 
