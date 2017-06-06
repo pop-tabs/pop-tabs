@@ -17,11 +17,12 @@
     "background": {
         "scripts": [
             "js/main.js",
-            "js/context-menu.js"
+            "js/context-menu.js",
+            "js/command.js"
         ]
     },
     "commands": {
-        "unify-all-tabs": {
+        "merge-all-windows": {
             "suggested_key": {
                 "default": "Ctrl+Shift+U"
             },
