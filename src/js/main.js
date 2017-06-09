@@ -1,3 +1,8 @@
+/**
+ * @author https://github.com/glegoux
+ * @overview Main utilies
+ */
+
 'use strict';
 
 class Main {

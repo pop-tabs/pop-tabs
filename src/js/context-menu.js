@@ -1,3 +1,8 @@
+/**
+ * @author https://github.com/glegoux
+ * @overview Manage context menu on Google Chrome
+ */
+
 (function () {
 
     'use strict';

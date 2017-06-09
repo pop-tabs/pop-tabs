@@ -12,13 +12,13 @@ source init.sh
 
 cd ..
 
-rm -rfv src_compress/
+rm -rfv compressed_src/ compressed_src.zip
 
-cp -rv src src_compress/
+cp -rv src compressed_src/
 
-for file in `find src_compress/js -type f`; do
+for file in `find compressed_src/js -type f`; do
     echo "uglifyjs ${file}"
     uglifyjs -v --compress -- "${file}" | sponge "${file}"
 done
 
-zip -rv src_compress.zip src_compress
+zip -rmv compressed_src.zip compressed_src
