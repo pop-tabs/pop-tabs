@@ -14,11 +14,11 @@ cd ..
 
 rm -rfv compressed_src/ compressed_src.zip
 
-cp -rv src compressed_src/
+cp -rv src/ compressed_src/
 
-for file in `find compressed_src/js -type f`; do
+for file in `find compressed_src/js/ -type f`; do
     echo "uglifyjs ${file}"
     uglifyjs -v --compress -- "${file}" | sponge "${file}"
 done
 
-zip -rmv compressed_src.zip compressed_src
+zip -rmv compressed_src.zip compressed_src/
