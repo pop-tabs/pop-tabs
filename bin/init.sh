@@ -8,7 +8,7 @@ die() {
 }
 
 # Check if node is available
-which node &> /dev/null
+\which node &> /dev/null
 
 if [ $? -ne 0 ];  then
 
@@ -29,4 +29,3 @@ else
     fi
 
 fi
-
