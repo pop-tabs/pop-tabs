@@ -26,9 +26,7 @@ class Main {
 
     static getCurrentWindow() {
         return new Promise(resolve => {
-            chrome.windows.getCurrent(function (window) {
-                resolve(window);
-            });
+            chrome.windows.getCurrent(resolve);
         });
     }
 
