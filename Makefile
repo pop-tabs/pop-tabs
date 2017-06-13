@@ -17,21 +17,20 @@ CHROME_PROFILE = $(shell cat CHROME_PROFILE)
 usage:
 	@echo "targets include: usage install doc deploy"
 
-.PHONY: init
-init:
-	@source "$(BIN_DIR)/init.sh"
-
 .PHONY: install
 install:
 	@npm install
 
 .PHONY: doc
-doc: init
-	@jsdoc "$(SRC_DIR)" -c "$(CONF_DOC)" --verbose
+doc:
+	@echo $$PATH
+	@source "$(BIN_DIR)/init.sh"; \
+	jsdoc "$(SRC_DIR)" -c "$(CONF_DOC)" --verbose
 	@google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DOC_DIR)/index.html"
 
 .PHONY: deploy
-deploy: init
-	@"$(BIN_DIR)/compress.sh"
+deploy:
+	@source "$(BIN_DIR)/init.sh"; \
+	"$(BIN_DIR)/compress.sh"
 	@google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DEPLOY_URL)"
 

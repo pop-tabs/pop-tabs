@@ -1,9 +1,9 @@
 {
-  "name": "pop-tabs",
-  "version_name": "0.0.1 alpha",
-  "version": "0.0.1",
   "devDependencies": {
     "jsdoc": "3.4.3",
     "uglify-es": "3.0.15"
-  }
+  },
+  "name": "pop-tabs",
+  "version": "0.0.1",
+  "version_name": "0.0.1-alpha"
 }

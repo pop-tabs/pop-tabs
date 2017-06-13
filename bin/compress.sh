@@ -9,13 +9,16 @@ cd "`dirname "$0"`"
 
 cd ..
 
-rm -rfv compressed_src/ compressed_src.zip
+version="$(cat VERSION)"
+name="pop-tabs_${version}"
 
-cp -rv src/ compressed_src/
+rm -rfv "${name}.zip" "${name}"
 
-for file in `find compressed_src/js/ -type f`; do
+cp -rv src/ "${name}"/
+
+for file in `find "${name}/js/" -type f`; do
     echo "uglifyjs ${file}"
     uglifyjs -v --compress -- "${file}" | sponge "${file}"
 done
 
-zip -rmv compressed_src.zip compressed_src/
+zip -rmv "${name}.zip" "${name}"

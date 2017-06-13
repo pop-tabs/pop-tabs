@@ -1,33 +1,33 @@
 {
-    "manifest_version": 2,
-    "name": "pop-tabs",
-    "description": "Chrome extension to manipulate smartly and quickly numerous opened tabs",
-    "version_name": "0.0.0.2 alpha",
-    "version": "0.0.0.2",
-    "update_url": "https://clients2.google.com/service/update2/crx",
-    "minimum_chrome_version": "49",
-    "permissions": [
-        "tabs",
-        "bookmarks",
-        "contextMenus"
-    ],
-    "icons": {
-        "16": "icons/16x16.png",
-        "128": "icons/128x128.png"
-    },
-    "background": {
-        "scripts": [
-            "js/main.js",
-            "js/context-menu.js",
-            "js/command.js"
-        ]
-    },
-    "commands": {
-        "merge-all-windows": {
-            "suggested_key": {
-                "default": "Ctrl+Shift+U"
-            },
-            "description": "Merge all windows in the current window"
-        }
+  "manifest_version": 2,
+  "name": "pop-tabs",
+  "description": "Chrome extension to manipulate smartly and quickly numerous opened tabs",
+  "version_name": "0.0.1-alpha",
+  "version": "0.0.1",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "minimum_chrome_version": "49",
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "contextMenus"
+  ],
+  "icons": {
+    "16": "icons/16x16.png",
+    "128": "icons/128x128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/main.js",
+      "js/context-menu.js",
+      "js/command.js"
+    ]
+  },
+  "commands": {
+    "merge-all-windows": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Merge all windows in the current window"
     }
+  }
 }
