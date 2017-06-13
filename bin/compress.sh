@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-#
-# Required: sudo apt install moreutils
-#
 # compress.sh (GNU bash script 4.3)
 #
+# Required: sudo apt install moreutils
 # Use : bash compress.sh
 
 cd "`dirname "$0"`"
