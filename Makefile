@@ -33,5 +33,5 @@ doc: init
 .PHONY: deploy
 deploy: init
 	@"$(BIN_DIR)/compress.sh"
-	google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DEPLOY_URL)"
+	@google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DEPLOY_URL)"
 
