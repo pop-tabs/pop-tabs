@@ -28,7 +28,7 @@ install:
 .PHONY: doc
 doc: init
 	@jsdoc "$(SRC_DIR)" -c "$(CONF_DOC)" --verbose
-	@google-chrome --user-data-dir="$(CHROME_PROFILE)" "$(DOC_DIR)/index.html"
+	@google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DOC_DIR)/index.html"
 
 .PHONY: deploy
 deploy: init
