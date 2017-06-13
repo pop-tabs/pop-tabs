@@ -14,7 +14,7 @@ MANIFEST = '../src/manifest.json'
 def read_version():
     with open(VERSION, 'r') as filename:
         content = filename.read().strip()
-        return content.split('-')
+    return content.split('-')
 
 def merge_version(version):
     return '{}-{}'.format(*version)
