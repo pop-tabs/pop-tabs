@@ -23,10 +23,10 @@ def set_version(version, json_file):
     print('Set {}'.format(json_file))
     with open(json_file, 'r') as filename:
         data = json.load(filename, object_pairs_hook=OrderedDict)
-        data['version'] = version[0]
-        data['version_name'] = merge_version(version)
+    data['version'] = version[0]
+    data['version_name'] = merge_version(version)
+    content = json.dumps(data, indent=2)
     with open(json_file, 'w') as filename:
-        content = json.dumps(data, indent=2)
         filename.write(content)
 
 if __name__ == "__main__":
