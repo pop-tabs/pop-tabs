@@ -12,25 +12,32 @@ EXTENSION_ID = obdkadanihffijoldabdhhdhmdbkdejg
 DEPLOY_URL = https://chrome.google.com/webstore/developer/edit/$(EXTENSION_ID)
 # see chrome://version/ to complete CHROME_PROFILE file
 CHROME_PROFILE = $(shell cat CHROME_PROFILE)
+VERSION = $(shell cat VERSION)
 
 .PHONY: usage
 usage:
-	@echo "targets include: usage install doc deploy"
+	@echo "targets include: usage version install doc deploy"
 
 .PHONY: install
 install:
 	@npm install
 
+.PHONY: version
+version:
+	@echo $(VERSION)
+
 .PHONY: doc
 doc:
-	@echo $$PATH
 	@source "$(BIN_DIR)/init.sh"; \
-	jsdoc "$(SRC_DIR)" -c "$(CONF_DOC)" --verbose
-	@google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DOC_DIR)/index.html"
+	jsdoc "$(SRC_DIR)" -c "$(CONF_DOC)" -d $(DOC_DIR)/$(VERSION) --verbose
+	@google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DOC_DIR)/$(VERSION)/index.html"
 
 .PHONY: deploy
 deploy:
+	@"$(BIN_DIR)/set_version.sh"
 	@source "$(BIN_DIR)/init.sh"; \
 	"$(BIN_DIR)/compress.sh"
 	@google-chrome --profile-directory="$(CHROME_PROFILE)" "$(DEPLOY_URL)"
+
+
 
