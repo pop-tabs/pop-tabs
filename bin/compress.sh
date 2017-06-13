@@ -2,11 +2,10 @@
 # compress.sh (GNU bash script 4.3)
 #
 # Required: sudo apt install moreutils
+#           source init.sh
 # Use : bash compress.sh
 
 cd "`dirname "$0"`"
-
-source init.sh
 
 cd ..
 

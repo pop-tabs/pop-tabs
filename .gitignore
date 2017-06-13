@@ -1,8 +1,14 @@
-# Webstorm IDE
+# webstorm IDE
 .idea/
 
 # archive
 *.zip
 
-# Development-related files
+# profile chrome
+CHROME_PROFILE
+
+# doc
+doc/
+
+# development-related files
 node_modules/
