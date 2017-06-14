@@ -1,5 +1,6 @@
 {
   "manifest_version": 2,
+  "short_name": "pop-tabs",
   "name": "pop-tabs",
   "description": "Chrome extension to manipulate smartly and quickly numerous opened tabs",
   "version_name": "0.0.1-alpha",
