@@ -6,7 +6,7 @@
   "version_name": "0.0.1-alpha",
   "version": "0.0.1",
   "update_url": "https://clients2.google.com/service/update2/crx",
-  "minimum_chrome_version": "49",
+  "minimum_chrome_version": "59",
   "permissions": [
     "tabs",
     "bookmarks",
@@ -26,7 +26,7 @@
   "commands": {
     "merge-all-windows": {
       "suggested_key": {
-        "default": "Ctrl+Shift+U"
+        "default": "Ctrl+Shift+A"
       },
       "description": "Merge all windows in the current window"
     }

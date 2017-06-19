@@ -18,7 +18,7 @@
     chrome.contextMenus.create({
         parentId: "manage-tabs-item",
         id: "merge-all-windows-item",
-        title: "Merge all windows       Ctrl+Shift+U",
+        title: "Merge all windows       Ctrl+Shift+A",
         contexts: ["page_action"],
         onclick: () => {
             Main.mergeAllWindows();
