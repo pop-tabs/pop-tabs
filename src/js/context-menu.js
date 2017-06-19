@@ -20,7 +20,7 @@
         id: "merge-all-windows-item",
         title: "Merge all windows       Ctrl+Shift+U",
         contexts: ["page_action"],
-        onclick: function () {
+        onclick: () => {
             Main.mergeAllWindows();
         }
     });
@@ -30,7 +30,7 @@
         id: "pin-all-tabs-item",
         title: "Pin all tabs",
         contexts: ["page_action"],
-        onclick: function (item) {
+        onclick: () => {
             Main.updateTabs({}, {pinned: true});
         }
     });
@@ -40,7 +40,7 @@
         id: "unpin-all-tabs-item",
         title: "Unpin all tabs",
         contexts: ["page_action"],
-        onclick: function (item) {
+        onclick: () => {
             Main.updateTabs({}, {pinned: false});
         }
     });
@@ -50,7 +50,7 @@
         id: "isolate-audible-tabs-item",
         title: "Isolate audible tabs",
         contexts: ["page_action"],
-        onclick: function () {
+        onclick: () => {
             Main.isolateTabs({audible: true});
         }
     });
@@ -60,7 +60,7 @@
         id: "mute-all-tabs-item",
         title: "Mute all tabs",
         contexts: ["page_action"],
-        onclick: function (item) {
+        onclick: () => {
             Main.updateTabs({}, {muted: true});
         }
     });
@@ -70,7 +70,7 @@
         id: "unmute-all-tabs-item",
         title: "Unmute all tabs",
         contexts: ["page_action"],
-        onclick: function (item) {
+        onclick: () => {
             Main.updateTabs({}, {muted: false});
         }
     });
@@ -79,7 +79,7 @@
         id: "save-session-and-quit-item",
         title: "Save session and quit",
         contexts: ["page_action"],
-        onclick: function () {
+        onclick: () => {
             Main.mergeAllWindows();
             Main.updateTabs({}, {pinned: true});
             Main.getCurrentWindow().then(window => {
