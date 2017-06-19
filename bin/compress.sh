@@ -15,6 +15,7 @@ name="pop-tabs_${version}"
 rm -rfv "${name}.zip" "${name}"
 
 cp -rv src/ "${name}"/
+cp -v LICENSE "${name}"/
 
 for file in `find "${name}/js/" -type f`; do
     echo "uglifyjs ${file}"
