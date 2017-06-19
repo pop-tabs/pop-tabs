@@ -15,7 +15,7 @@ class Main {
     /**
      * Update tabs found from <tt>query</tt> with <tt>updateProperties</tt>.
      *
-     * @member Main
+     * @memberof Main
      * @public
      *
      * @param {object} query JSON to filter tabs to update
@@ -35,12 +35,12 @@ class Main {
     /**
      * Get all tabs found from <tt>query</tt>.
      *
-     * @member Main
+     * @memberof Main
      * @public
      *
      * @param {object} query JSON to filter tabs to update
      *
-     * @returns {Promise.<Array[Tab]>}
+     * @returns {Promise.<Array<Tab>>}
      *
      * @see https://developer.chrome.com/extensions/tabs#method-query
      * @see https://developer.chrome.com/extensions/tabs#type-Tab
@@ -54,7 +54,7 @@ class Main {
     /**
      * Create window with <tt>createData</tt>.
      *
-     * @member Main
+     * @memberof Main
      * @public
      *
      * @param {object} createData JSON to create new window
@@ -73,7 +73,7 @@ class Main {
     /**
      * Get the current window under shape <tt>Window</tt> object.
      *
-     * @member Main
+     * @memberof Main
      * @public
      *
      * @returns {Promise.<Window>}
@@ -91,7 +91,7 @@ class Main {
      * Get all tab identifiers for each window under shape
      * a <tt>Map[int, array[int]]</tt> object.
      *
-     * @member Main
+     * @memberof Main
      * @public
      *
      * @returns {Promise.<Map>}
@@ -118,7 +118,7 @@ class Main {
     /**
      * Merge all windows in the current window.
      *
-     * @member Main
+     * @memberof Main
      * @public
      *
      * @see Main.getTabIdsPerWindow
@@ -142,7 +142,7 @@ class Main {
     /**
      * Isolate tabs found from <tt>query</tt> into a single new window.
      *
-     * @member Main
+     * @memberof Main
      * @public
      *
      * @param query {object} JSON to filter tabs to isolate.
